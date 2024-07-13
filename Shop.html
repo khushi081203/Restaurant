@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Restaurant Name</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            background-image: url('shop.jpg');
+        }
+        .shop {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #e1dada;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .shop h1 {
+            text-align: center;
+            color: #333;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product {
+            flex: 1 1 45%;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .product h2 {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+        .product p {
+            font-size: 16px;
+            color: #666;
+        }
+        .product .price {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+        .product button {
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .product button:hover {
+            background: #555;
+        }
+        #message {
+            display: none;
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+            background-color: #dff0d8;
+            color: #3c763d;
+            border: 1px solid #d6e9c6;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="shop">
+        <h1>Shop</h1>
+        <div id="message">Item added to cart!</div>
+        <div class="product-list">
+            <div class="product">
+                <h2>Special Sauce</h2>
+                <p>Our famous special sauce, perfect for any dish.</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h2>Restaurant T-Shirt</h2>
+                <p>Comfortable and stylish, available in all sizes.</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h2>Gift Card</h2>
+                <p>Give the gift of great food with our gift cards.</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+            <div class="product">
+                <h2>Coffee Mug</h2>
+                <p>Start your day with our branded coffee mug.</p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function addToCart() {
+            var message = document.getElementById('message');
+            message.style.display = 'block';
+            setTimeout(function() {
+                message.style.display = 'none';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
